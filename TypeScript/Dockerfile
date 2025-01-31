@@ -1,4 +1,8 @@
 FROM node:22-alpine
+
 WORKDIR /app
-COPY . .
-RUN npm i
+
+COPY package*.json /app
+RUN npm install
+
+COPY . /app
